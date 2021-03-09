@@ -1,3 +1,4 @@
+import React from 'react'
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import uniqid from 'uniqid'
 
