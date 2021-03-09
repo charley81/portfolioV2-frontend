@@ -14,6 +14,7 @@ const globalStyles = css`
   body {
     background-color: var(--lightColor);
     color: var(--primaryColor);
+    font-family: 'Montserrat', sans-serif;
   }
 `
 

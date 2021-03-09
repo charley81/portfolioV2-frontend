@@ -1,27 +1,45 @@
 module.exports = {
   siteMetadata: {
-    title: "portfolioV2",
+    title: 'portfolioV2',
   },
   plugins: [
-    "gatsby-plugin-emotion",
-    "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
+    'gatsby-plugin-emotion',
+    'gatsby-plugin-image',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        icon: "src/images/icon.png",
+        google: {
+          families: ['Satisfy', 'cursive', 'Montserrat', 'sans-serif'],
+        },
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-strapi`,
       options: {
-        name: "images",
-        path: "./src/images/",
+        apiURL: `http://localhost:1337`,
+        queryLimit: 1000, // Default to 100
+        contentTypes: [`job`],
+        //If using single types place them in this array.
+        // singleTypes: [`home-page`, `contact`],
       },
-      __key: "images",
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/images/icon.png',
+      },
+    },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: './src/images/',
+      },
+      __key: 'images',
     },
   ],
-};
+}
