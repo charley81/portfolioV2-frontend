@@ -4,14 +4,14 @@ const globalStyles = css`
   :root {
     --maxWidth: 1100px;
     --mainFont: 'Montserrat', sans-serif;
-    --handwriting: 'Satisfy', cursive;
+    --handwriting: 'Allura', cursive;
     --borderRadius: 3px;
     --transition: all 0.3s ease;
     --maxWidth: 1100px;
-    --primaryColor: #3c1874;
-    --secondaryColor: #de354c;
+    --primaryColor: ##371bb1;
+    --secondaryColor: #05f4b7;
     --lightColor: #f3f3f3;
-    --darkColor: #283747;
+    --darkColor: #12151f;
   }
 
   body {
