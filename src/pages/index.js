@@ -5,7 +5,9 @@ import Layout from '../components/layout'
 const IndexPage = () => {
   return (
     <Layout>
-      <h1>start here</h1>
+      <section className="section">
+        <h1>start here</h1>
+      </section>
     </Layout>
   )
 }
