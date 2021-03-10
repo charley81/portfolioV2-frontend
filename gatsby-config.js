@@ -11,7 +11,12 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Allura', 'cursive', 'Montserrat', 'sans-serif'],
+          families: [
+            'Architects Daughter',
+            'cursive',
+            'Montserrat',
+            'sans-serif',
+          ],
         },
       },
     },

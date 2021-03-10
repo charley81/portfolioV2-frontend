@@ -27,7 +27,6 @@ const Navbar = ({ toggleSidebar }) => {
         }
 
         h1 {
-          font-family: var(--handwriting);
           margin-bottom: 0;
           background: -webkit-linear-gradient(
             left,
@@ -36,6 +35,18 @@ const Navbar = ({ toggleSidebar }) => {
           );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          transition: var(--transition);
+          cursor: pointer;
+
+          &:hover {
+            background: -webkit-linear-gradient(
+              left,
+              var(--lightColor),
+              var(--lightColor)
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
         }
 
         ul {
@@ -51,7 +62,7 @@ const Navbar = ({ toggleSidebar }) => {
           transition: var(--transition);
 
           &:hover {
-            color: var(--darkColor);
+            color: var(--lightColor);
           }
         }
       `}

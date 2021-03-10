@@ -4,7 +4,7 @@ const globalStyles = css`
   :root {
     --maxWidth: 1100px;
     --mainFont: 'Montserrat', sans-serif;
-    --handwriting: 'Allura', cursive;
+    --handwriting: 'Architects Daughter', cursive;
     --borderRadius: 3px;
     --transition: all 0.3s ease;
     --maxWidth: 1100px;
@@ -27,6 +27,18 @@ const globalStyles = css`
     line-height: 1.5;
     font-size: 16px;
     letter-spacing: 2px;
+
+    @media (min-width: 500px) {
+      font-size: 18px;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 25px;
+    }
+
+    @media (min-width: 1000px) {
+      font-size: 30px;
+    }
   }
 
   li {
@@ -43,8 +55,7 @@ const globalStyles = css`
   h4,
   h5,
   h6 {
-    line-height: 1.25;
-    margin-bottom: 1rem;
+    font-family: var(--handwriting);
   }
 
   ${'' /* global classes */}
