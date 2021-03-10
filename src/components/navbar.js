@@ -7,14 +7,12 @@ const Navbar = ({ toggleSidebar }) => {
   return (
     <nav
       css={css`
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
-        height: 5rem;
+        height: 4rem;
         display: flex;
         align-items: center;
-        z-index: 999;
+        background-color: var(--primaryColor);
+        color: var(--lightColor);
 
         .nav-center {
           width: 90vw;
@@ -30,6 +28,14 @@ const Navbar = ({ toggleSidebar }) => {
 
         h1 {
           font-family: var(--handwriting);
+          margin-bottom: 0;
+          background: -webkit-linear-gradient(
+            left,
+            var(--lightColor),
+            var(--secondaryColor)
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
 
         ul {
@@ -40,7 +46,7 @@ const Navbar = ({ toggleSidebar }) => {
           font-size: 2rem;
           background: transparent;
           border-color: transparent;
-          color: var(--primaryColor);
+          color: var(--secondaryColor);
           cursor: pointer;
           transition: var(--transition);
 

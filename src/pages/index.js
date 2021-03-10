@@ -1,13 +1,12 @@
 import * as React from 'react'
 import Layout from '../components/layout'
+import Hero from '../components/hero'
 
 // markup
 const IndexPage = () => {
   return (
     <Layout>
-      <section className="section">
-        <h1>start here</h1>
-      </section>
+      <Hero />
     </Layout>
   )
 }

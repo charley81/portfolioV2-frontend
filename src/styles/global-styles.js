@@ -8,15 +8,21 @@ const globalStyles = css`
     --borderRadius: 3px;
     --transition: all 0.3s ease;
     --maxWidth: 1100px;
-    --primaryColor: ##371bb1;
+    --primaryColor: #371bb1;
     --secondaryColor: #05f4b7;
     --lightColor: #f3f3f3;
     --darkColor: #12151f;
   }
 
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
   body {
     background-color: var(--lightColor);
-    color: var(--primaryColor);
+    color: var(--darkColor);
     font-family: var(--mainFont);
     line-height: 1.5;
     font-size: 16px;
