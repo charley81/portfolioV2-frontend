@@ -2,6 +2,7 @@ import React from 'react'
 import Title from './title'
 import Project from '../components/project'
 import { Link } from 'gatsby'
+import { css } from '@emotion/react'
 
 const Projects = ({ projects, title, showLink }) => {
   return (
