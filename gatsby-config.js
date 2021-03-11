@@ -25,7 +25,7 @@ module.exports = {
       options: {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
-        contentTypes: [`job`],
+        contentTypes: [`project`],
         //If using single types place them in this array.
         // singleTypes: [`home-page`, `contact`],
       },

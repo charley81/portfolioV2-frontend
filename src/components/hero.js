@@ -19,7 +19,7 @@ const Hero = () => {
           a {
             color: var(--secondaryColor);
             margin-right: 2rem;
-            font-size: 1.75rem;
+            font-size: 2rem;
             padding: 0.75rem;
             background: var(--primaryColor);
             border-radius: 50%;

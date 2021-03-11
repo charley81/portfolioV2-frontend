@@ -1,18 +1,22 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import { AiOutlineAlignRight } from 'react-icons/ai'
-import PageLinks from '../constants/links'
+import pageLinks from '../constants/links'
+import { Link } from 'gatsby'
 
 const Navbar = ({ toggleSidebar }) => {
   return (
     <nav
       css={css`
         width: 100%;
-        height: 4rem;
+        height: 5rem;
         display: flex;
         align-items: center;
         background-color: var(--primaryColor);
         color: var(--lightColor);
+
+        @media (min-width: 768px) {
+        }
 
         .nav-center {
           width: 90vw;
@@ -65,6 +69,32 @@ const Navbar = ({ toggleSidebar }) => {
             color: var(--lightColor);
           }
         }
+
+        @media screen and (min-width: 768px) {
+          a {
+            color: var(--lightColor);
+          }
+
+          button {
+            font-size: 2rem;
+            display: none;
+          }
+
+          ul {
+            display: flex;
+            justify-content: flex-end;
+          }
+
+          li {
+            margin-right: 2rem;
+          }
+
+          .nav-center {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+          }
+        }
       `}
     >
       <div className="nav-center">
@@ -74,7 +104,15 @@ const Navbar = ({ toggleSidebar }) => {
             <AiOutlineAlignRight />
           </button>
         </div>
-        <PageLinks styleClass="nav-links" />
+        <ul>
+          {pageLinks.map(link => {
+            return (
+              <li key={link.id}>
+                <Link to={link.url}>{link.text}</Link>
+              </li>
+            )
+          })}
+        </ul>
       </div>
     </nav>
   )

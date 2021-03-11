@@ -14,6 +14,7 @@ const globalStyles = css`
     --darkColor: #12151f;
   }
 
+  /* Global Styles */
   * {
     box-sizing: border-box;
     margin: 0;
@@ -27,18 +28,6 @@ const globalStyles = css`
     line-height: 1.5;
     font-size: 16px;
     letter-spacing: 2px;
-
-    @media (min-width: 500px) {
-      font-size: 18px;
-    }
-
-    @media (min-width: 768px) {
-      font-size: 25px;
-    }
-
-    @media (min-width: 1000px) {
-      font-size: 30px;
-    }
   }
 
   li {
@@ -58,8 +47,7 @@ const globalStyles = css`
     font-family: var(--handwriting);
   }
 
-  ${'' /* global classes */}
-
+  /* Btn  */
   .btn {
     background: var(--primaryColor);
     color: var(--lightColor);
@@ -87,7 +75,7 @@ const globalStyles = css`
     margin-top: 3rem;
   }
 
-  ${'' /* section */}
+  /* Section */
   .section {
     padding: 5rem 0;
   }
@@ -98,28 +86,12 @@ const globalStyles = css`
     max-width: var(--maxWidth);
   }
 
-  ${'' /* titles */}
+  /* Utility Classes */
   .underline {
-    width: 5rem;
+    width: 15rem;
     height: 0.25rem;
     background: var(--primaryColor);
     margin: 0 auto 1.25rem;
-  }
-
-  .section-title {
-    margin-bottom: 4rem;
-    text-align: center;
-  }
-
-  ${'' /* social links */}
-  .social-links {
-    font-size: 1.75rem;
-    color: var(--darkColor);
-    transition: var(--transition);
-
-    &:hover {
-      color: var(--colorPrimary);
-    }
   }
 `
 
