@@ -11,7 +11,12 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Allura', 'cursive', 'Montserrat', 'sans-serif'],
+          families: [
+            'Architects Daughter',
+            'cursive',
+            'Montserrat',
+            'sans-serif',
+          ],
         },
       },
     },
@@ -20,7 +25,7 @@ module.exports = {
       options: {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
-        contentTypes: [`job`],
+        contentTypes: [`project`],
         //If using single types place them in this array.
         // singleTypes: [`home-page`, `contact`],
       },

@@ -30,16 +30,4 @@ const data = [
   },
 ]
 
-export default ({ styleClass }) => {
-  return (
-    <ul>
-      {data.map(link => {
-        return (
-          <li key={link.id}>
-            <Link to={link.url}>{link.text}</Link>
-          </li>
-        )
-      })}
-    </ul>
-  )
-}
+export default data

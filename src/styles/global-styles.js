@@ -4,19 +4,26 @@ const globalStyles = css`
   :root {
     --maxWidth: 1100px;
     --mainFont: 'Montserrat', sans-serif;
-    --handwriting: 'Allura', cursive;
+    --handwriting: 'Architects Daughter', cursive;
     --borderRadius: 3px;
     --transition: all 0.3s ease;
     --maxWidth: 1100px;
-    --primaryColor: ##371bb1;
+    --primaryColor: #371bb1;
     --secondaryColor: #05f4b7;
     --lightColor: #f3f3f3;
     --darkColor: #12151f;
   }
 
+  /* Global Styles */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
   body {
     background-color: var(--lightColor);
-    color: var(--primaryColor);
+    color: var(--darkColor);
     font-family: var(--mainFont);
     line-height: 1.5;
     font-size: 16px;
@@ -37,12 +44,10 @@ const globalStyles = css`
   h4,
   h5,
   h6 {
-    line-height: 1.25;
-    margin-bottom: 1rem;
+    font-family: var(--handwriting);
   }
 
-  ${'' /* global classes */}
-
+  /* Btn  */
   .btn {
     background: var(--primaryColor);
     color: var(--lightColor);
@@ -70,7 +75,7 @@ const globalStyles = css`
     margin-top: 3rem;
   }
 
-  ${'' /* section */}
+  /* Section */
   .section {
     padding: 5rem 0;
   }
@@ -81,28 +86,12 @@ const globalStyles = css`
     max-width: var(--maxWidth);
   }
 
-  ${'' /* titles */}
+  /* Utility Classes */
   .underline {
-    width: 5rem;
+    width: 15rem;
     height: 0.25rem;
     background: var(--primaryColor);
     margin: 0 auto 1.25rem;
-  }
-
-  .section-title {
-    margin-bottom: 4rem;
-    text-align: center;
-  }
-
-  ${'' /* social links */}
-  .social-links {
-    font-size: 1.75rem;
-    color: var(--darkColor);
-    transition: var(--transition);
-
-    &:hover {
-      color: var(--colorPrimary);
-    }
   }
 `
 

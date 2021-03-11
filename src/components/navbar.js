@@ -1,20 +1,22 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import { AiOutlineAlignRight } from 'react-icons/ai'
-import PageLinks from '../constants/links'
+import pageLinks from '../constants/links'
+import { Link } from 'gatsby'
 
 const Navbar = ({ toggleSidebar }) => {
   return (
     <nav
       css={css`
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
         height: 5rem;
         display: flex;
         align-items: center;
-        z-index: 999;
+        background-color: var(--primaryColor);
+        color: var(--lightColor);
+
+        @media (min-width: 768px) {
+        }
 
         .nav-center {
           width: 90vw;
@@ -29,7 +31,26 @@ const Navbar = ({ toggleSidebar }) => {
         }
 
         h1 {
-          font-family: var(--handwriting);
+          margin-bottom: 0;
+          background: -webkit-linear-gradient(
+            left,
+            var(--lightColor),
+            var(--secondaryColor)
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transition: var(--transition);
+          cursor: pointer;
+
+          &:hover {
+            background: -webkit-linear-gradient(
+              left,
+              var(--lightColor),
+              var(--lightColor)
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
         }
 
         ul {
@@ -40,12 +61,38 @@ const Navbar = ({ toggleSidebar }) => {
           font-size: 2rem;
           background: transparent;
           border-color: transparent;
-          color: var(--primaryColor);
+          color: var(--secondaryColor);
           cursor: pointer;
           transition: var(--transition);
 
           &:hover {
-            color: var(--darkColor);
+            color: var(--lightColor);
+          }
+        }
+
+        @media screen and (min-width: 768px) {
+          a {
+            color: var(--lightColor);
+          }
+
+          button {
+            font-size: 2rem;
+            display: none;
+          }
+
+          ul {
+            display: flex;
+            justify-content: flex-end;
+          }
+
+          li {
+            margin-right: 2rem;
+          }
+
+          .nav-center {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
           }
         }
       `}
@@ -57,7 +104,15 @@ const Navbar = ({ toggleSidebar }) => {
             <AiOutlineAlignRight />
           </button>
         </div>
-        <PageLinks styleClass="nav-links" />
+        <ul>
+          {pageLinks.map(link => {
+            return (
+              <li key={link.id}>
+                <Link to={link.url}>{link.text}</Link>
+              </li>
+            )
+          })}
+        </ul>
       </div>
     </nav>
   )

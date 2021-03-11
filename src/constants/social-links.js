@@ -26,7 +26,9 @@ export default ({ styleClass }) => {
       {data.map(link => {
         return (
           <li key={link.id}>
-            <a href={link.url}>{link.icon}</a>
+            <a href={link.url} target="_blank" rel="noreferrer">
+              {link.icon}
+            </a>
           </li>
         )
       })}
