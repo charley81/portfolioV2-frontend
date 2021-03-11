@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import SocialLinks from '../constants/social-links'
+import socialLinks from '../constants/social-links'
 import { css } from '@emotion/react'
 
 const Hero = () => {
@@ -52,7 +52,17 @@ const Hero = () => {
         <Link to="/contact" className="btn">
           contact me
         </Link>
-        <SocialLinks />
+        <ul>
+          {socialLinks.map(link => {
+            return (
+              <li key={link.id}>
+                <a href={link.url} target="_blank" rel="noreferrer">
+                  {link.icon}
+                </a>
+              </li>
+            )
+          })}
+        </ul>
       </div>
     </header>
   )

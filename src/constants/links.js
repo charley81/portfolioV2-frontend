@@ -1,5 +1,3 @@
-import React from 'react'
-import { Link } from 'gatsby'
 import uniqid from 'uniqid'
 
 const data = [

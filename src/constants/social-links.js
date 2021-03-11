@@ -20,18 +20,4 @@ const data = [
   },
 ]
 
-export default ({ styleClass }) => {
-  return (
-    <ul className={`social-links ${styleClass ? styleClass : ''}`}>
-      {data.map(link => {
-        return (
-          <li key={link.id}>
-            <a href={link.url} target="_blank" rel="noreferrer">
-              {link.icon}
-            </a>
-          </li>
-        )
-      })}
-    </ul>
-  )
-}
+export default data
