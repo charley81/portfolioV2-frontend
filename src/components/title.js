@@ -6,6 +6,7 @@ const Title = ({ title }) => {
     <div
       css={css`
         text-align: center;
+        margin-bottom: 4rem;
 
         h2 {
           margin-bottom: 1rem;

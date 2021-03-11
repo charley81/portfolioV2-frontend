@@ -7,7 +7,7 @@ import Projects from '../components/projects'
 // markup
 const IndexPage = ({ data }) => {
   const {
-    allStrapiProject: { node: projects },
+    allStrapiProject: { nodes: projects },
   } = data
 
   return (
@@ -29,9 +29,11 @@ export const query = graphql`
         url
         image {
           childImageSharp {
-            fluid {
-              src
-            }
+            gatsbyImageData(
+              height: 320
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
           }
         }
         stack {
