@@ -2,6 +2,6 @@
 
 # Uses
 
-- gatsbyjs
+- gatsbyjs V3
 - formspree
 - strapi

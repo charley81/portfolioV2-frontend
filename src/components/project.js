@@ -21,6 +21,8 @@ const Project = ({ description, title, index, image, url, github, stack }) => {
 
         .project-img {
           border-radius: 3px 3px 0 0;
+          height: 19rem;
+          z-index: 1;
         }
 
         .project-img::after {
@@ -55,7 +57,6 @@ const Project = ({ description, title, index, image, url, github, stack }) => {
         .project-stack {
           margin: 1rem 0;
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
           gap: 0.25rem;
           text-align: center;
 
@@ -71,6 +72,33 @@ const Project = ({ description, title, index, image, url, github, stack }) => {
             font-size: 1.75rem;
             color: var(--primaryColor);
             padding-right: 1rem;
+          }
+        }
+
+        @media screen and (min-width: 768px) {
+          .project-img {
+            height: 22rem;
+          }
+        }
+
+        @media screen and (min-width: 990px) {
+          grid-template-columns: repeat(12, 1fr);
+          align-items: center;
+          box-shadow: none;
+
+          .project-img {
+            grid-column: 1 / span 8;
+            grid-row: 1 / 1;
+            height: 30rem;
+            border-radius: var(--borderRadius);
+          }
+
+          .project-info {
+            z-index: 1;
+            grid-column: 5 / 12;
+            grid-row: 1 / 1;
+            background: var(--secondaryColor);
+            border-radius: var(--borderRadius);
           }
         }
       `}
