@@ -56,15 +56,6 @@ const Project = ({ description, title, index, image, url, github, stack }) => {
 
         .project-stack {
           margin: 1rem 0;
-          display: grid;
-          gap: 0.25rem;
-          text-align: center;
-
-          span {
-            background: var(--secondaryColor);
-            color: var(--darkColor);
-            border-radius: var(--borderRadius);
-          }
         }
 
         .project-links {
@@ -111,8 +102,9 @@ const Project = ({ description, title, index, image, url, github, stack }) => {
         <h3>{title || 'default title'}</h3>
         <p>{description}</p>
         <div className="project-stack">
+          <h4>Tech Used:</h4>
           {stack.map(item => {
-            return <span key={item.id}>{item.name}</span>
+            return <span key={item.id}>{item.name} |</span>
           })}
         </div>
         <div className="project-links">
