@@ -108,10 +108,10 @@ const Project = ({ description, title, index, image, url, github, stack }) => {
           })}
         </div>
         <div className="project-links">
-          <a href={github} target="_blank">
+          <a href={github} target="_blank" rel="noreferrer">
             <AiOutlineGithub />
           </a>
-          <a href={url} target="_blank">
+          <a href={url} target="_blank" rel="noreferrer">
             <AiOutlineLink />
           </a>
         </div>
