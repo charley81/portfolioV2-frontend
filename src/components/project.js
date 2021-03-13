@@ -91,6 +91,19 @@ const Project = ({ description, title, index, image, url, github, stack }) => {
             background: var(--secondaryColor);
             border-radius: var(--borderRadius);
           }
+
+          &:nth-of-type(even) {
+            .project-img {
+              grid-column: 5 / -1;
+              grid-row: 1 /1;
+            }
+
+            .project-info {
+              grid-column: 2 / span 7;
+              grid-row: 1 / 1;
+              text-align: left;
+            }
+          }
         }
       `}
     >
