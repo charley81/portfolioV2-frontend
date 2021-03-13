@@ -30,7 +30,7 @@ const Navbar = ({ toggleSidebar }) => {
           align-items: center;
         }
 
-        h1 {
+        h3 {
           margin-bottom: 0;
           background: -webkit-linear-gradient(
             left,
@@ -50,6 +50,18 @@ const Navbar = ({ toggleSidebar }) => {
             );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+          }
+
+          @media screen and (min-width: 500px) {
+            font-size: 1.5rem;
+          }
+
+          @media screen and (min-width: 768px) {
+            font-size: 1.8rem;
+          }
+
+          @media screen and (min-width: 1100px) {
+            font-size: 2rem;
           }
         }
 
@@ -99,7 +111,7 @@ const Navbar = ({ toggleSidebar }) => {
     >
       <div className="nav-center">
         <div className="nav-header">
-          <h1>Chris Harley</h1>
+          <h3>Chris Harley</h3>
           <button type="button" onClick={toggleSidebar}>
             <AiOutlineAlignRight />
           </button>

@@ -47,6 +47,28 @@ const globalStyles = css`
     font-family: var(--handwriting);
   }
 
+  @media screen and (min-width: 500px) {
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+
+  @media screen and (min-width: 1100px) {
+    h1 {
+      font-size: 6rem;
+    }
+  }
+
   /* Btn  */
   .btn {
     background: var(--primaryColor);
