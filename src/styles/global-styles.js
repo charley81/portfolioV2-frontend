@@ -61,6 +61,10 @@ const globalStyles = css`
     h1 {
       font-size: 4rem;
     }
+
+    h2 {
+      font-size: 2.5rem;
+    }
   }
 
   @media screen and (min-width: 1100px) {
