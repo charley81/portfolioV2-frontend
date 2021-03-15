@@ -45,18 +45,20 @@ export const query = graphql`
         }
       }
     }
-    allStrapiBlog {
+    allStrapiBlog(sort: { fields: date, order: DESC }, limit: 3) {
       nodes {
         slug
         category
         content
-        data(formatString: "MMMM Do, YYYY")
+        date(formatString: "MMMM Do, YYYY")
         description
         id
+        title
         image {
           childImageSharp {
             gatsbyImageData(
               height: 300
+              width: 300
               placeholder: BLURRED
               formats: [AUTO, WEBP, AVIF]
             )
