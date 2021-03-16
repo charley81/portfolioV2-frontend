@@ -23,18 +23,23 @@ const Footer = () => {
         a {
           color: var(--secondaryColor);
           font-size: 1.5rem;
-          margin: 0 1rem;
-        }
+          border-radius: 50%;
+          transition: var(--transition);
+          padding: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
-        .info {
-          margin-top: 1rem;
+          &:hover {
+            background: var(--primaryColor);
+          }
         }
       `}
     >
       <div className="links">
         {socialLinks.map(link => {
           return (
-            <li>
+            <li key={link.id}>
               <a href={link.url}>{link.icon}</a>
             </li>
           )
