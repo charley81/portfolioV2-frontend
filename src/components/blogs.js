@@ -2,6 +2,8 @@ import React from 'react'
 import Title from './title'
 import Blog from './blog'
 import { Link } from 'gatsby'
+import { css } from '@emotion/react'
+
 export const Blogs = ({ blogs, title, showLink }) => {
   return (
     <section className="section">

@@ -8,6 +8,8 @@ const globalStyles = css`
     --borderRadius: 3px;
     --transition: all 0.3s ease;
     --maxWidth: 1100px;
+    --boxShadowLight: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    --boxShadowDark: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     --primaryColor: #371bb1;
     --secondaryColor: #05f4b7;
     --lightColor: #f3f3f3;
