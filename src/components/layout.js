@@ -3,6 +3,7 @@ import { Global, css } from '@emotion/react'
 import PropTypes from 'prop-types'
 import globalStyles from '../styles/global-styles'
 import Navbar from './navbar'
+import Footer from './footer'
 
 const Layout = ({ children }) => {
   return (
@@ -18,7 +19,7 @@ const Layout = ({ children }) => {
       >
         {children}
       </main>
-      <footer></footer>
+      <Footer />
     </div>
   )
 }
