@@ -119,6 +119,10 @@ const globalStyles = css`
     background: var(--primaryColor);
     margin: 0 auto 1.25rem;
   }
+
+  .active {
+    border-bottom: 0.5rem solid var(--secondaryColor);
+  }
 `
 
 export default globalStyles

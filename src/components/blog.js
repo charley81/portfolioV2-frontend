@@ -1,13 +1,16 @@
 import React from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
+import { css } from '@emotion/react'
 
-const Blog = ({ category, date, description, id, image, key, slug, title }) => {
+const Blog = ({ category, date, description, image, slug, title }) => {
   const blogImage = getImage(image)
-  console.log(title)
+
   return (
     <Link to={`/blogs/${slug}`}>
-      <article>{image && <GatsbyImage image={blogImage} />}</article>
+      <article>
+        {image && <GatsbyImage image={blogImage} alt={title} />}
+      </article>
       <div className="blog-card">
         <h4>{title}</h4>
         <p>{description}</p>

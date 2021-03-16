@@ -15,7 +15,14 @@ const Navbar = ({ toggleSidebar }) => {
         background-color: var(--primaryColor);
         color: var(--lightColor);
 
-        @media (min-width: 768px) {
+        a {
+          color: var(--lightColor);
+          transition: var(--transition);
+
+          &:hover {
+            border-bottom: 0.5rem solid var(--secondaryColor);
+            color: var(--secondaryColor);
+          }
         }
 
         .nav-center {
@@ -83,10 +90,6 @@ const Navbar = ({ toggleSidebar }) => {
         }
 
         @media screen and (min-width: 768px) {
-          a {
-            color: var(--lightColor);
-          }
-
           button {
             font-size: 2rem;
             display: none;
@@ -120,7 +123,9 @@ const Navbar = ({ toggleSidebar }) => {
           {pageLinks.map(link => {
             return (
               <li key={link.id}>
-                <Link to={link.url}>{link.text}</Link>
+                <Link to={link.url} activeClassName="active">
+                  {link.text}
+                </Link>
               </li>
             )
           })}
