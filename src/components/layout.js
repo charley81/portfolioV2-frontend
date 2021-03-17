@@ -7,18 +7,25 @@ import Footer from './footer'
 
 const Layout = ({ children }) => {
   return (
-    <div>
-      <Global styles={globalStyles} />
-      <Navbar />
-      <main
-        css={css`
+    <div
+      className="site"
+      css={css`
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+
+        main {
           max-width: var(--maxWidth);
           margin: auto;
           padding: 1rem;
-        `}
-      >
-        {children}
-      </main>
+          flex-grow: 1;
+        }
+      `}
+    >
+      <Global styles={globalStyles} />
+
+      <Navbar />
+      <main>{children}</main>
       <Footer />
     </div>
   )

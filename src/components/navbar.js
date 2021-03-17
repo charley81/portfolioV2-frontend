@@ -14,6 +14,7 @@ const Navbar = ({ toggleSidebar }) => {
         align-items: center;
         background-color: var(--primaryColor);
         color: var(--lightColor);
+        z-index: 999;
 
         a {
           color: var(--lightColor);

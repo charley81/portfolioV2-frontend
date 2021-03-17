@@ -1,13 +1,17 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
+import Layout from '../components/layout'
 
-// markup
 const errorPage = () => {
   return (
-    <main>
-      <h3>Something we wrong...</h3>
-      <Link to="/">back home</Link>
-    </main>
+    <Layout>
+      <section className="section">
+        <h1>Something we wrong...</h1>
+        <Link to="/" className="btn center-btn">
+          back home
+        </Link>
+      </section>
+    </Layout>
   )
 }
 

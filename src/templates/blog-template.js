@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import ReactMarkdown from 'react-markdown'
 
 const BlogTemplate = ({ data }) => {
-  const { content, title, category, date } = data.strapiBlog
+  const { content } = data.strapiBlog
 
   return (
     <Layout>
