@@ -47,6 +47,7 @@ const globalStyles = css`
   h5,
   h6 {
     font-family: var(--handwriting);
+    text-transform: uppercase;
   }
 
   @media screen and (min-width: 500px) {
