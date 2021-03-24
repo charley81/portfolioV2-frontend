@@ -126,6 +126,16 @@ const globalStyles = css`
   .active {
     border-bottom: 0.5rem solid var(--secondaryColor);
   }
+
+  .sidebar {
+    opacity: 0;
+  }
+
+  .show-sidebar {
+    opacity: 1;
+    z-index: 999;
+    color: black;
+  }
 `
 
 export default globalStyles
