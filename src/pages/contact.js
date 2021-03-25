@@ -40,24 +40,23 @@ const contactPage = () => {
           }
         `}
       >
-        <article>
-          <h3>Contact Me</h3>
-          <form action="https://formspree.io/f/mayawpoy" method="POST">
-            <div className="input-fields">
-              <input type="text" name="name" placeholder="Name" required />
-              <input type="email" name="email" placeholder="Email" required />
-              <textarea
-                name="message"
-                rows="5"
-                placeholder="Message"
-                required
-              ></textarea>
-            </div>
-            <button className="btn center-btn" type="submit">
-              Submit
-            </button>
-          </form>
-        </article>
+        <h3>Contact Me</h3>
+
+        <form action="https://formspree.io/f/mayawpoy" method="POST">
+          <div className="input-fields">
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Message"
+              required
+            ></textarea>
+          </div>
+          <button className="btn center-btn" type="submit">
+            Submit
+          </button>
+        </form>
       </section>
     </Layout>
   )
