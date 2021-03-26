@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Global, css } from '@emotion/react'
-import PropTypes from 'prop-types'
 import globalStyles from '../styles/global-styles'
 import Navbar from './navbar'
 import Footer from './footer'
@@ -39,7 +38,3 @@ const Layout = ({ children }) => {
 }
 
 export default Layout
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}

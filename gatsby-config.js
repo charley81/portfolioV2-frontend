@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'portfolioV2',
+    siteUrl: 'https://google.com',
   },
   plugins: [
     'gatsby-plugin-emotion',
