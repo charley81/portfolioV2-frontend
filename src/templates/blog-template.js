@@ -2,13 +2,20 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import ReactMarkdown from 'react-markdown'
+import { css } from '@emotion/react'
 
 const BlogTemplate = ({ data }) => {
   const { content } = data.strapiBlog
 
   return (
     <Layout>
-      <section>
+      <section
+        css={css`
+          article img {
+            margin: 2rem 0;
+          }
+        `}
+      >
         <div className="section-center">
           <article>
             <ReactMarkdown source={content} />
