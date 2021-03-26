@@ -115,7 +115,9 @@ const Navbar = ({ toggleSidebar }) => {
     >
       <div className="nav-center">
         <div className="nav-header">
-          <h3>Chris Harley</h3>
+          <h3>
+            <Link to="/">Chris Harley</Link>
+          </h3>
           <button type="button" onClick={toggleSidebar}>
             <AiOutlineAlignRight />
           </button>

@@ -32,6 +32,10 @@ const globalStyles = css`
     letter-spacing: 2px;
   }
 
+  img {
+    width: 100%;
+  }
+
   li {
     list-style: none;
   }
