@@ -1,8 +1,4 @@
 module.exports = {
-  siteMetadata: {
-    title: 'portfolioV2',
-    siteUrl: 'http://localhost:8000/',
-  },
   plugins: [
     'gatsby-plugin-emotion',
     'gatsby-plugin-image',
@@ -26,7 +22,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:1337`,
+        apiURL: `https://portfoliov2-admin.herokuapp.com/admin`,
         queryLimit: 1000, // Default to 100
         contentTypes: [`project`, 'blog'],
         singleTypes: [`about`],
